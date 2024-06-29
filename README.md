@@ -3,7 +3,7 @@
 **Name:** Dharmadeep  
 **Company:** CODTECH IT SOLUTIONS  
 **Employee ID:** CT6FSWD597
-**Duration:** June - August  
+**Duration:** June to August
 **Domain:** Full Stack Web Development
 
 ## Overview
