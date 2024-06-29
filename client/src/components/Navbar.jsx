@@ -11,10 +11,6 @@ const Navbar = () => {
   const { setUserInfo, userInfo } = useContext(UserContext);
   const navigate = useNavigate();
 
-  /* useEffect :
-   The login and logout triggers a re-render of all components that consume the context, 
-   including Navbar
-  */
   useEffect(() => {
     const fetchData = async () => {
       try {

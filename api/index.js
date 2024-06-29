@@ -18,18 +18,20 @@ app.use(express.json());
 app.use(cookieParser());
 
 //Db connect
-mongoose.connect(
-  "mongodb+srv://dharmadeepmadisetty:iamdharmathelegend@cluster0.zldooer.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-);
+mongoose.connect(REACT_APP_MONGO_URL);
 
 ////////////////////////
-/////Get requests///////
+///// Get requests///////
 ///////////////////////
 
 app.get("/test", (req, res) => {
   res.json("Test ok");
 });
 
+/*
+The data from here is used in nav bar first, there the info is set to userinfo that further gets assigned 
+to userContext and them be able to access all arround the project
+*/
 app.get("/profile", (req, res) => {
   const { token } = req.cookies;
   jsonwebtoken.verify(token, secret, {}, (err, info) => {
